@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Class Assignment</title>
+</head>
+<body>
+    <h1>Check Grade</h1>
+
+    <form onsubmit="perk(); return false">
+Enter your Per% : <input type="number" max="100" min="0" name="" id="per" required> <br> <br>
+      
+ <button>Check Your Percentage</button>
+
+    </form>
+
+    <h1 id="grade"></h1>
+<script>
+    function perk(){
+        let per = +document.querySelector('#per').value;
+    if(per >= 80){
+        let grade = "A-1 Grade, Excellent Work"
+        document.querySelector("#grade").innerHTML=grade;
+    }
+    else if(per >= 70 ){
+        let grade = "A Grade, Very-Good Work"
+        document.querySelector("#grade").innerHTML=grade;
+    }else if(per >= 60 ){
+        let grade = "B Grade, Good Work"
+        document.querySelector("#grade").innerHTML=grade;
+    }else if(per >= 50 ){
+        let grade = "C Grade, Fair Work"
+        document.querySelector("#grade").innerHTML=grade;
+    }else {
+        let grade = "Failed , Work-Hard"
+        document.querySelector("#grade").innerHTML=grade;
+    }
+}
+</script>
+</body>
+</html>
